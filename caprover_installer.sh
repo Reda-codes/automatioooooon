@@ -1,10 +1,11 @@
 #!/bin/sh
 
-sudo apt update
+y | sudo apt update
 sudo ufw allow 80,443,3000,996,7946,4789,2377/tcp
 sudo ufw allow 7946,4789,2377/udp
 sudo apt install git -y
 sudo apt install npm -y
+y | sudo apt update
 sudo git clone https://github.com/usmhic/server_setup_libary.git
 cd server_setup_libary
 sudo chmod +x docker.sh docker_compose.sh
